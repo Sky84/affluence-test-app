@@ -1,0 +1,21 @@
+.appointment {
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  .appointment-date-fields {
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    .date-form {
+      display: flex;
+      align-items: center;
+      padding-bottom: 1rem;
+      * {
+        flex: 1;
+      }
+    }
+  }
+}

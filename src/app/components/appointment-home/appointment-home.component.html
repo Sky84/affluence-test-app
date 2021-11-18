@@ -1,0 +1,22 @@
+<div class="appointment">
+  <h3>
+    Please select a date and an hour to check if the resource is available
+  </h3>
+  <form
+    [formGroup]="appointmentDateForm"
+    class="appointment-date-fields"
+    (ngSubmit)="onSubmit()"
+  >
+    <div class="date-form">
+      <input type="date" formControlName="date" />
+      <select name="datetime" formControlName="dateTime">
+        <option value="{{ time }}" *ngFor="let time of appointmentTimes">
+          {{ getTimeToViewString(time) }}
+        </option>
+      </select>
+    </div>
+    <button type="submit" [disabled]="!appointmentDateForm.valid">
+      Submit
+    </button>
+  </form>
+</div>
